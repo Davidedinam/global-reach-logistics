@@ -1,5 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Globe, Users, Award, TrendingUp, Shield, Clock } from "lucide-react";
+import teamMeeting from "@/assets/team-meeting.jpg";
+import operationsCenter from "@/assets/operations-center.jpg";
+import partnership from "@/assets/partnership.jpg";
 
 const About = () => {
   const stats = [
@@ -85,25 +88,36 @@ const About = () => {
       {/* Company Story */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">Our Story</h2>
-            <div className="space-y-4 text-lg text-muted-foreground animate-slide-up">
-              <p>
-                Founded in 2000, GlobalShip began with a simple mission: to make international
-                shipping accessible, reliable, and efficient for businesses of all sizes. What
-                started as a small freight forwarding company has grown into a global logistics
-                powerhouse.
-              </p>
-              <p>
-                Today, we operate in over 150 countries, managing millions of shipments annually.
-                Our success is built on unwavering commitment to our customers, continuous
-                innovation, and a team of dedicated logistics professionals.
-              </p>
-              <p>
-                We understand that every shipment carries more than just goods—it carries trust,
-                promises, and the success of your business. That's why we treat every package with
-                the same care and attention, whether it's crossing town or crossing the globe.
-              </p>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-2 md:order-1">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">Our Story</h2>
+                <div className="space-y-4 text-lg text-muted-foreground animate-slide-up">
+                  <p>
+                    Founded in 2000, GlobalShip began with a simple mission: to make international
+                    shipping accessible, reliable, and efficient for businesses of all sizes. What
+                    started as a small freight forwarding company has grown into a global logistics
+                    powerhouse.
+                  </p>
+                  <p>
+                    Today, we operate in over 150 countries, managing millions of shipments annually.
+                    Our success is built on unwavering commitment to our customers, continuous
+                    innovation, and a team of dedicated logistics professionals.
+                  </p>
+                  <p>
+                    We understand that every shipment carries more than just goods—it carries trust,
+                    promises, and the success of your business. That's why we treat every package with
+                    the same care and attention, whether it's crossing town or crossing the globe.
+                  </p>
+                </div>
+              </div>
+              <div className="order-1 md:order-2 animate-fade-in">
+                <img 
+                  src={teamMeeting} 
+                  alt="GlobalShip team collaboration" 
+                  className="rounded-lg shadow-xl w-full h-auto"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -145,7 +159,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
             {values.map((value, index) => (
               <div
                 key={index}
@@ -160,20 +174,47 @@ const About = () => {
               </div>
             ))}
           </div>
+
+          {/* Operations Center Image */}
+          <div className="max-w-5xl mx-auto animate-fade-in">
+            <img 
+              src={operationsCenter} 
+              alt="Global operations command center" 
+              className="rounded-lg shadow-2xl w-full h-auto"
+            />
+            <p className="text-center text-muted-foreground mt-4 text-sm">
+              Our state-of-the-art operations center monitors shipments worldwide 24/7
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-gradient-hero text-primary-foreground">
+      <section className="py-16 md:py-24 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose GlobalShip?</h2>
-            <p className="text-xl text-primary-foreground/90 mb-8">
-              With decades of experience and a global network, we deliver more than just
-              packages—we deliver peace of mind. Our state-of-the-art tracking systems, dedicated
-              customer support, and industry-leading on-time delivery rates make us the preferred
-              choice for businesses worldwide.
-            </p>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="animate-fade-in">
+                <img 
+                  src={partnership} 
+                  alt="Building partnerships through trust" 
+                  className="rounded-lg shadow-xl w-full h-auto"
+                />
+              </div>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose GlobalShip?</h2>
+                <p className="text-xl text-muted-foreground mb-6">
+                  With decades of experience and a global network, we deliver more than just
+                  packages—we deliver peace of mind.
+                </p>
+                <p className="text-lg text-muted-foreground">
+                  Our state-of-the-art tracking systems, dedicated customer support, and 
+                  industry-leading on-time delivery rates make us the preferred choice for 
+                  businesses worldwide. We build lasting partnerships based on trust, reliability, 
+                  and exceptional service.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
