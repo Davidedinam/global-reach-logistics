@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Plane, Ship, Truck, Warehouse, Shield, Clock, Globe, Award } from "lucide-react";
+import heroShip from "@/assets/hero-ship.jpg";
+import warehouseImg from "@/assets/warehouse.jpg";
+import airFreightImg from "@/assets/air-freight.jpg";
+import truckFleetImg from "@/assets/truck-fleet.jpg";
 
 const Home = () => {
   const services = [
@@ -53,8 +57,16 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-hero text-primary-foreground py-20 md:py-32">
-        <div className="container mx-auto px-4">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={heroShip} 
+            alt="Cargo ship with containers" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
+        </div>
+        <div className="relative container mx-auto px-4 py-20 md:py-32 text-primary-foreground">
           <div className="max-w-3xl animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Reliable Global Shipping & Logistics Solutions
@@ -134,6 +146,56 @@ const Home = () => {
                 <p className="text-muted-foreground">{feature.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Image Showcase Section */}
+      <section className="py-16 md:py-24 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Infrastructure</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              State-of-the-art facilities and equipment to serve you better
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="relative overflow-hidden rounded-lg shadow-lg group animate-fade-in">
+              <img 
+                src={warehouseImg} 
+                alt="Modern warehouse facility" 
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                <h3 className="text-xl font-bold text-white">Advanced Warehousing</h3>
+                <p className="text-white/90">Secure storage with real-time inventory tracking</p>
+              </div>
+            </div>
+            
+            <div className="relative overflow-hidden rounded-lg shadow-lg group animate-fade-in" style={{ animationDelay: "0.1s" }}>
+              <img 
+                src={airFreightImg} 
+                alt="Air freight operations" 
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                <h3 className="text-xl font-bold text-white">Air Freight Network</h3>
+                <p className="text-white/90">Fast international shipping via major airlines</p>
+              </div>
+            </div>
+            
+            <div className="relative overflow-hidden rounded-lg shadow-lg group animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <img 
+                src={truckFleetImg} 
+                alt="Truck fleet" 
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                <h3 className="text-xl font-bold text-white">Modern Fleet</h3>
+                <p className="text-white/90">GPS-tracked vehicles for land transportation</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

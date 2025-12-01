@@ -17,8 +17,15 @@ const TrackShipment = () => {
       return;
     }
 
-    // Mock tracking data - in production, this would call an API
-    const mockData = {
+    // Simulate API loading
+    toast.loading("Searching for your shipment...", { id: "tracking-search" });
+
+    // Simulate API delay
+    setTimeout(() => {
+      toast.dismiss("tracking-search");
+
+      // Generate realistic mock data based on tracking number
+      const mockData = {
       trackingNumber: trackingNumber,
       status: "In Transit",
       currentLocation: "Los Angeles, CA",
@@ -56,10 +63,13 @@ const TrackShipment = () => {
           completed: true,
         },
       ],
-    };
+      };
 
-    setTrackingResult(mockData);
-    toast.success("Shipment found!");
+      setTrackingResult(mockData);
+      toast.success("Shipment found! Showing tracking details.", {
+        duration: 3000,
+      });
+    }, 1500);
   };
 
   return (
