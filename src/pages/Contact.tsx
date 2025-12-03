@@ -174,18 +174,20 @@ const Contact = () => {
             <div className="animate-slide-up" style={{ animationDelay: "0.1s" }}>
               <h2 className="text-3xl font-bold mb-6">Our Location</h2>
               
-              {/* Map Placeholder */}
+              {/* Google Maps Embed */}
               <Card className="mb-6">
                 <CardContent className="p-0">
-                  <div className="w-full h-[400px] bg-muted rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="h-12 w-12 text-primary mx-auto mb-2" />
-                      <p className="text-muted-foreground">Map integration placeholder</p>
-                      <p className="text-sm text-muted-foreground">
-                        Agiou loannou 63, Agia Paraskevi, Greece 15342
-                      </p>
-                    </div>
-                  </div>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.8595867848!2d23.8234!3d37.9950!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1998f4b38e9eb%3A0x2b3c2d6e9f0a7c8!2sAgiou%20Ioannou%2063%2C%20Agia%20Paraskevi%20153%2042%2C%20Greece!5e0!3m2!1sen!2s!4v1701619200000!5m2!1sen!2s"
+                    width="100%"
+                    height="400"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="rounded-lg"
+                    title="N Cargo Shipping Location"
+                  />
                 </CardContent>
               </Card>
 

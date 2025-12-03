@@ -57,7 +57,7 @@ const About = () => {
       <section className="bg-gradient-hero text-primary-foreground py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About GlobalShip</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">About N Cargo Shipping</h1>
             <p className="text-xl text-primary-foreground/90">
               Your trusted partner in global logistics since 2000
             </p>
@@ -94,7 +94,7 @@ const About = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">Our Story</h2>
                 <div className="space-y-4 text-lg text-muted-foreground animate-slide-up">
                   <p>
-                    Founded in 2000, GlobalShip began with a simple mission: to make international
+                    Founded with a simple mission, N Cargo Shipping strives to make international
                     shipping accessible, reliable, and efficient for businesses of all sizes. What
                     started as a small freight forwarding company has grown into a global logistics
                     powerhouse.
@@ -114,7 +114,7 @@ const About = () => {
               <div className="order-1 md:order-2 animate-fade-in">
                 <img 
                   src={teamMeeting} 
-                  alt="GlobalShip team collaboration" 
+                  alt="N Cargo Shipping team collaboration" 
                   className="rounded-lg shadow-xl w-full h-auto"
                 />
               </div>
@@ -202,7 +202,7 @@ const About = () => {
                 />
               </div>
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose GlobalShip?</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose N Cargo Shipping?</h2>
                 <p className="text-xl text-muted-foreground mb-6">
                   With decades of experience and a global network, we deliver more than just
                   packages—we deliver peace of mind.
