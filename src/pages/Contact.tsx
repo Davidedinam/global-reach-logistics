@@ -42,17 +42,17 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["123 Logistics Avenue", "Global City, 12345", "United States"],
+      details: ["Agiou loannou 63", "Agia Paraskevi", "Greece 15342"],
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543", "Available 24/7"],
+      details: ["+30 694 727 0400", "Available 24/7"],
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@globalship.com", "support@globalship.com", "sales@globalship.com"],
+      details: ["ncargoshippingcompanyltd@gmail.com"],
     },
     {
       icon: Clock,
@@ -182,7 +182,7 @@ const Contact = () => {
                       <MapPin className="h-12 w-12 text-primary mx-auto mb-2" />
                       <p className="text-muted-foreground">Map integration placeholder</p>
                       <p className="text-sm text-muted-foreground">
-                        123 Logistics Avenue, Global City, 12345
+                        Agiou loannou 63, Agia Paraskevi, Greece 15342
                       </p>
                     </div>
                   </div>
