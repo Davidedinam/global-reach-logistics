@@ -13,11 +13,19 @@ import {
   DollarSign,
 } from "lucide-react";
 
+import serviceAirFreight from "@/assets/service-air-freight.jpg";
+import serviceSeaFreight from "@/assets/service-sea-freight.jpg";
+import serviceLandTransport from "@/assets/service-land-transport.jpg";
+import serviceWarehousing from "@/assets/service-warehousing.jpg";
+import serviceCustoms from "@/assets/service-customs.jpg";
+import serviceEcommerce from "@/assets/service-ecommerce.jpg";
+
 const Services = () => {
   const services = [
     {
       icon: Plane,
       title: "Air Freight",
+      image: serviceAirFreight,
       description:
         "Fast and reliable air cargo services for urgent shipments. We offer both standard and express air freight options with real-time tracking.",
       features: [
@@ -30,6 +38,7 @@ const Services = () => {
     {
       icon: Ship,
       title: "Sea Freight",
+      image: serviceSeaFreight,
       description:
         "Cost-effective ocean shipping for large volumes. Full container load (FCL) and less than container load (LCL) options available.",
       features: [
@@ -42,6 +51,7 @@ const Services = () => {
     {
       icon: Truck,
       title: "Land Transport",
+      image: serviceLandTransport,
       description:
         "Efficient ground transportation across continents with full truckload (FTL) and less than truckload (LTL) services.",
       features: [
@@ -54,6 +64,7 @@ const Services = () => {
     {
       icon: Warehouse,
       title: "Warehousing",
+      image: serviceWarehousing,
       description:
         "Secure storage solutions with advanced inventory management systems. Climate-controlled and standard warehousing available.",
       features: [
@@ -66,6 +77,7 @@ const Services = () => {
     {
       icon: FileCheck,
       title: "Customs Clearance",
+      image: serviceCustoms,
       description:
         "Expert customs brokerage services to ensure smooth clearance of your goods. We handle all documentation and compliance requirements.",
       features: [
@@ -78,6 +90,7 @@ const Services = () => {
     {
       icon: ShoppingBag,
       title: "E-Commerce Delivery",
+      image: serviceEcommerce,
       description:
         "Specialized last-mile delivery solutions for e-commerce businesses. Same-day and next-day delivery options available.",
       features: [
@@ -128,13 +141,23 @@ const Services = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="hover:shadow-xl transition-shadow animate-fade-in"
+                className="hover:shadow-xl transition-shadow animate-fade-in overflow-hidden"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardHeader>
-                  <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="h-8 w-8 text-primary" />
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                  <div className="absolute bottom-4 left-4">
+                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                      <service.icon className="h-6 w-6 text-primary-foreground" />
+                    </div>
                   </div>
+                </div>
+                <CardHeader className="pt-4">
                   <CardTitle className="text-2xl">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
