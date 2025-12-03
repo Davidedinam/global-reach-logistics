@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Package, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import logo from "@/assets/logo.jpeg";
 
 const Footer = () => {
   return (
@@ -9,8 +10,8 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <Package className="h-8 w-8" />
-              <span className="text-xl font-bold">GlobalShip</span>
+              <img src={logo} alt="N Cargo Shipping Company" className="h-12 w-12 object-contain bg-white rounded" />
+              <span className="text-lg font-bold">N Cargo Shipping</span>
             </div>
             <p className="text-primary-foreground/80 mb-4">
               Your trusted partner for reliable global shipping and logistics solutions.
@@ -77,16 +78,16 @@ const Footer = () => {
               <li className="flex items-start space-x-2">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  123 Logistics Avenue, Global City, 12345
+                  Agiou loannou 63, Agia Paraskevi, Greece 15342
                 </span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="h-5 w-5 flex-shrink-0" />
-                <span className="text-primary-foreground/80">+1 (555) 123-4567</span>
+                <span className="text-primary-foreground/80">+30 694 727 0400</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                <span className="text-primary-foreground/80">info@globalship.com</span>
+                <span className="text-primary-foreground/80">ncargoshippingcompanyltd@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -95,7 +96,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-primary-foreground/80 text-sm">
-              © 2025 GlobalShip. All rights reserved.
+              © 2025 N Cargo Shipping Company LTD. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-primary-foreground/80 hover:text-secondary text-sm transition-colors">
