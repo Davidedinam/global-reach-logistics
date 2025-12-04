@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Shield, Clock, Globe, Award, ArrowRight } from "lucide-react";
-import heroShip from "@/assets/hero-ship.jpg";
+import { Input } from "@/components/ui/input";
+import { Shield, Clock, Globe, Award, ArrowRight, Search, Package } from "lucide-react";
+import heroLogistics from "@/assets/hero-logistics.jpg";
 import warehouseImg from "@/assets/warehouse.jpg";
 import airFreightImg from "@/assets/air-freight.jpg";
 import truckFleetImg from "@/assets/truck-fleet.jpg";
@@ -13,6 +15,8 @@ import serviceCustoms from "@/assets/service-customs.jpg";
 import serviceEcommerce from "@/assets/service-ecommerce.jpg";
 
 const Home = () => {
+  const [trackingNumber, setTrackingNumber] = useState("");
+  const navigate = useNavigate();
   const services = [
     {
       image: serviceAirFreight,
@@ -76,17 +80,24 @@ const Home = () => {
     { value: "24/7", label: "Customer Support" },
   ];
 
+  const handleTrack = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (trackingNumber.trim()) {
+      navigate(`/track?id=${trackingNumber}`);
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden min-h-[90vh] flex items-center">
         <div className="absolute inset-0">
           <img 
-            src={heroShip} 
+            src={heroLogistics} 
             alt="Cargo ship with containers" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
         </div>
         <div className="relative container mx-auto px-4 py-20">
           <div className="max-w-3xl animate-fade-in">
@@ -99,13 +110,42 @@ const Home = () => {
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
               Connecting businesses worldwide with fast, secure, and cost-effective shipping services
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/track">
-                <Button size="lg" variant="secondary" className="w-full sm:w-auto text-lg px-8 py-6">
-                  Track Shipment
+
+            {/* Special Tracking Input */}
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-2xl mb-8">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 bg-secondary rounded-xl">
+                  <Package className="h-6 w-6 text-secondary-foreground" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-primary-foreground">Track Your Shipment</h3>
+                  <p className="text-sm text-primary-foreground/70">Enter your tracking ID to get real-time updates</p>
+                </div>
+              </div>
+              <form onSubmit={handleTrack} className="flex flex-col sm:flex-row gap-3">
+                <div className="relative flex-1">
+                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                  <Input
+                    type="text"
+                    placeholder="Enter tracking number (e.g., NC-2024-XXXXXX)"
+                    value={trackingNumber}
+                    onChange={(e) => setTrackingNumber(e.target.value)}
+                    className="pl-12 h-14 text-lg bg-white border-0 rounded-xl shadow-inner placeholder:text-muted-foreground/60"
+                  />
+                </div>
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  variant="secondary" 
+                  className="h-14 px-8 text-lg rounded-xl font-semibold"
+                >
+                  Track Now
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-              </Link>
+              </form>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/quote">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-8 py-6 bg-primary-foreground text-primary hover:bg-primary-foreground/90">
                   Request a Quote

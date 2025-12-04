@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
 
 const Footer = () => {
@@ -19,12 +19,6 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a href="#" className="hover:text-secondary transition-colors">
                 <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="hover:text-secondary transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="hover:text-secondary transition-colors">
-                <Linkedin className="h-5 w-5" />
               </a>
               <a href="#" className="hover:text-secondary transition-colors">
                 <Instagram className="h-5 w-5" />
