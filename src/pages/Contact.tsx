@@ -52,7 +52,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: ["ncargoshippingcompanyltd@gmail.com"],
+      details: ["swiftshippingcompanyltd@gmail.com"],
     },
     {
       icon: Clock,
@@ -186,7 +186,7 @@ const Contact = () => {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     className="rounded-lg"
-                    title="N Cargo Shipping Location"
+                    title="Swift Shipping Location"
                   />
                 </CardContent>
               </Card>
