@@ -10,8 +10,8 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <img src={logo} alt="Swift Shipping Company Limited" className="h-12 w-12 object-contain bg-white rounded" />
-              <span className="text-lg font-bold">Swift Shipping</span>
+              <img src={logo} alt="72hours cargo shipping company" className="h-12 w-12 object-contain bg-white rounded" />
+              <span className="text-lg font-bold">72hours Cargo</span>
             </div>
             <p className="text-primary-foreground/80 mb-4">
               Your trusted partner for reliable global shipping and logistics solutions.
@@ -90,7 +90,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-primary-foreground/80 text-sm">
-              © 2025 Swift Shipping Company Limited. All rights reserved.
+              © 2025 72hours cargo shipping company. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-primary-foreground/80 hover:text-secondary text-sm transition-colors">

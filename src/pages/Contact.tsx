@@ -186,7 +186,7 @@ const Contact = () => {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     className="rounded-lg"
-                    title="Swift Shipping Location"
+                    title="72hours Cargo Location"
                   />
                 </CardContent>
               </Card>
