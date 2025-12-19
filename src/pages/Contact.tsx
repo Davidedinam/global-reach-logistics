@@ -42,17 +42,17 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["Agiou loannou 63", "Agia Paraskevi", "Greece 15342"],
+      details: ["Kuruköprü Mh.", "Seyhan, Adana", "Turkey 01060"],
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+30 694 727 0400", "Available 24/7"],
+      details: ["+90 555 123 4567", "Available 24/7"],
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["swiftshippingcompanyltd@gmail.com"],
+      details: ["info@72hourscargo.com"],
     },
     {
       icon: Clock,
@@ -178,7 +178,7 @@ const Contact = () => {
               <Card className="mb-6">
                 <CardContent className="p-0">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.8595867848!2d23.8234!3d37.9950!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1998f4b38e9eb%3A0x2b3c2d6e9f0a7c8!2sAgiou%20Ioannou%2063%2C%20Agia%20Paraskevi%20153%2042%2C%20Greece!5e0!3m2!1sen!2s!4v1701619200000!5m2!1sen!2s"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3185.8!2d35.3213!3d36.9914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527f0a7a!2sKuruk%C3%B6pr%C3%BC%2C%20Seyhan%2FAdana%2C%20Turkey!5e0!3m2!1sen!2s!4v1701619200000!5m2!1sen!2s"
                     width="100%"
                     height="400"
                     style={{ border: 0 }}
