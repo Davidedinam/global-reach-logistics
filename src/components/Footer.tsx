@@ -72,16 +72,16 @@ const Footer = () => {
               <li className="flex items-start space-x-2">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  Agiou loannou 63, Agia Paraskevi, Greece 15342
+                  Kuruköprü Mh., Seyhan, Adana, Turkey 01060
                 </span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="h-5 w-5 flex-shrink-0" />
-                <span className="text-primary-foreground/80">+30 694 727 0400</span>
+                <span className="text-primary-foreground/80">+90 555 123 4567</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                <span className="text-primary-foreground/80">swiftshippingcompanyltd@gmail.com</span>
+                <span className="text-primary-foreground/80">info@72hourscargo.com</span>
               </li>
             </ul>
           </div>
