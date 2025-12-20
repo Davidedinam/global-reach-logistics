@@ -52,7 +52,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@72hourscargo.com"],
+      details: ["72hourscargoshippingcompany@gmail.com"],
     },
     {
       icon: Clock,

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
 
 const Footer = () => {
@@ -17,10 +17,7 @@ const Footer = () => {
               Your trusted partner for reliable global shipping and logistics solutions.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-secondary transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="hover:text-secondary transition-colors">
+              <a href="https://www.instagram.com/72hourscargoshippingcompany" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -81,7 +78,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                <span className="text-primary-foreground/80">info@72hourscargo.com</span>
+                <span className="text-primary-foreground/80">72hourscargoshippingcompany@gmail.com</span>
               </li>
             </ul>
           </div>
