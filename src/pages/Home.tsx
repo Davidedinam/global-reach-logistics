@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Shield, Clock, Globe, Award, ArrowRight, Search, Package } from "lucide-react";
+import NewYearBanner from "@/components/NewYearBanner";
 import heroLogistics from "@/assets/hero-logistics.jpg";
 import warehouseImg from "@/assets/warehouse.jpg";
 import airFreightImg from "@/assets/air-freight.jpg";
@@ -89,6 +90,9 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
+      {/* Happy New Year Banner */}
+      <NewYearBanner />
+      
       {/* Hero Section */}
       <section className="relative overflow-hidden min-h-[90vh] flex items-center">
         <div className="absolute inset-0">
